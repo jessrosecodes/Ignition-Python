@@ -1,0 +1,136 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ctg_active_client]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ctg_active_client](
+	[Client_ID] [varchar](45) NOT NULL DEFAULT (''),
+	[PointID] [varchar](255) NOT NULL DEFAULT (''),
+ CONSTRAINT [PK_ctg_active_client] PRIMARY KEY CLUSTERED 
+(
+	[Client_ID] ASC,
+	[PointID] ASC
+)WITH (PAD_INDEX  = OFF, IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ctg_axes]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ctg_axes](
+	[ndx] [int] IDENTITY(1,1) NOT FOR REPLICATION NOT NULL,
+	[NAME] [varchar](45) NOT NULL,
+	[LABEL] [varchar](45) NOT NULL,
+	[TYPE] [varchar](45) NOT NULL,
+	[LABEL_COLOR] [varchar](45) NOT NULL,
+	[TICK_LABEL_COLOR] [varchar](45) NOT NULL,
+	[TICK_MARK_COLOR] [varchar](45) NOT NULL,
+	[POSITION] [int] NOT NULL,
+	[AUTO_RANGE] [bit] NOT NULL,
+	[AUTO_RANGE_INCL_ZERO] [bit] NOT NULL,
+	[AUTO_RANGE_MARGIN] [float] NOT NULL,
+	[LOWER_BOUND] [float] NOT NULL,
+	[UPPER_BOUND] [float] NOT NULL,
+	[AUTO_TICK_UNITS] [bit] NOT NULL,
+	[TICK_UNIT] [float] NOT NULL,
+	[GRID_UNIT] [float] NOT NULL,
+	[DEFAULT_SUBPLOT] [int] NOT NULL,
+ CONSTRAINT [PK_ctg_axes] PRIMARY KEY CLUSTERED 
+(
+	[ndx] ASC
+)WITH (PAD_INDEX  = OFF, IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ctg_pens]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ctg_pens](
+	[PointID] [varchar](255) NOT NULL DEFAULT (''),
+	[NAME] [varchar](255) NULL DEFAULT (NULL),
+	[LOCATION] [varchar](255) NOT NULL,
+	[TYPE] [varchar](45) NOT NULL,
+	[COL_NAME] [varchar](45) NULL DEFAULT (NULL),
+	[TABLE_NAME] [varchar](45) NULL DEFAULT (NULL),
+	[XVAL_COL_NAME] [varchar](60) NULL DEFAULT (NULL),
+	[TAG_PATH] [varchar](255) NULL DEFAULT (NULL),
+	[AGGREGATION_MODE] [varchar](20) NULL DEFAULT (NULL),
+	[AXIS] [varchar](45) NULL DEFAULT (NULL),
+	[SUBPLOT] [int] NULL DEFAULT ('0'),
+	[ENABLED] [bit] NOT NULL DEFAULT ('1'),
+	[DATASOURCE] [varchar](45) NULL DEFAULT (NULL),
+	[COLOR] [varchar](45) NULL DEFAULT (NULL),
+	[DASH_PATTERN] [varchar](45) NULL DEFAULT (NULL),
+	[RENDER_STYLE] [int] NULL DEFAULT ('1'),
+	[LINE_WEIGHT] [int] NULL DEFAULT ('1'),
+	[SHAPE] [int] NULL DEFAULT ('0'),
+	[FILL_SHAPE] [bit] NOT NULL DEFAULT ('1'),
+	[GROUP_NAME] [varchar](45) NULL DEFAULT (NULL),
+	[WHERE_CLAUSE] [varchar](155) NULL DEFAULT (NULL),
+	[DIGITAL] [bit] NOT NULL DEFAULT ('0'),
+	[OVERRIDE_AUTOCOLOR] [bit] NOT NULL DEFAULT ('0'),	
+ CONSTRAINT [PK_ctg_pens] PRIMARY KEY CLUSTERED 
+(
+	[PointID] ASC
+)WITH (PAD_INDEX  = OFF, IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ctg_saved_graphs]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ctg_saved_graphs](
+	[ID] [int] IDENTITY(1,1) NOT FOR REPLICATION NOT NULL,
+	[Name] [varchar](255) NOT NULL,
+	[Description] [varchar](255) NOT NULL,
+ CONSTRAINT [PK_ctg_saved_graphs] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ctg_subplots]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ctg_subplots](
+	[ID] [int] NOT NULL,
+	[WEIGHT] [int] NOT NULL,
+	[OVERRIDE_BACKGROUND] [bit] NOT NULL,
+	[OVERRIDE_BACKGROUND_COLOR] [varchar](45) NOT NULL,
+ CONSTRAINT [PK_ctg_subplots] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ctg_saved_graph_pens]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[ctg_saved_graph_pens](
+	[SavedGraphID] [int] NOT NULL,
+	[PointID] [varchar](255) NOT NULL,
+ CONSTRAINT [PK_ctg_saved_graph_pens] PRIMARY KEY CLUSTERED 
+(
+	[SavedGraphID] ASC,
+	[PointID] ASC
+)WITH (PAD_INDEX  = OFF, IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+END

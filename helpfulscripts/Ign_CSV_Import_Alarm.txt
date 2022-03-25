@@ -1,0 +1,41 @@
+# Import Python's built-in csv library
+import csv
+ 
+# Ask the user to find the CSV in the local file system.
+path = system.file.openFile("csv")
+ 
+if path is not None:
+	# Create a reader object that will iterate over the lines of a CSV.
+	# We're using Python's built-in open() function to open the file.
+	csvData = csv.reader(open(path))
+	
+	for row in csvData:
+	
+		tag_path = row[1]
+		alarm_description = row[2]
+		
+		system.tag.writeBlocking(tag_path, alarm_description)
+
+# Import Python's built-in csv library.
+import csv
+ 
+# Ask the user to find the CSV in the local file system.
+path = system.file.openFile("csv")
+ 
+# Create a reader object that will iterate over the lines of a CSV.
+# We're using Python's built-in open() function to open the file.
+csvData = csv.reader(open(path))
+ 
+# Create a List of strings to use as a header for the dataset. Note that the number
+# of headers must match the number of columns in the CSV, otherwise an error will occur.
+# The simplest approach would be to use next() to read the first line in the file, and
+# store that at the header.
+header = csvData.next()
+ 
+# Create a dataset with the header and the rest of our CSV.
+path = ["[default]SPG/Trends/TagPens_1"]
+dataset = system.dataset.toDataSet(header ,list(csvData))
+
+# Store it into the table.
+event.source.parent.getComponent('Power Table').data = dataset
+system.tag.writeBlocking(paths, dataset)

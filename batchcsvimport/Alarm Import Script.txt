@@ -1,0 +1,12 @@
+# Import Python's built-in csv library
+import csv
+# Ask the user to find the CSV in the local file system.
+path = system.file.openFile("csv")
+if path is not None:
+# Create a reader object that will iterate over the lines of a CSV.
+# We're using Python's built-in open() function to open the file.
+	csvData = csv.reader(open(path))
+	for row in csvData:
+		tag_path = row[1]
+		alarm_description = row[2]
+		system.tag.writeBlocking(tag_path, alarm_description)

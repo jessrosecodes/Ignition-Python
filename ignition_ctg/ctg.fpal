@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects timestamp="Tue Feb 23 16:15:03 PST 2010" export.itemcount="1" export.contents="Palettes" framework.version="7.0.3.4519" fpmi.version="4.0.3.4519" >
+<o cls="com.inductiveautomation.factorypmi.designer.palette.model.CustomPaletteItemGroup">
+	<o-c m="setItems" s="1;java.util.List">
+		<arraylist len="5">
+			<o cls="com.inductiveautomation.factorypmi.designer.palette.model.SerializedPaletteItem">
+				<o-c m="setData" s="1;str"><str>H4sIAAAAAAAAAO1X3W/bNhB/dv4KTU/bQ6iP2EkWySo6py06NI2xqHvZEy0xCVtKFEjKiYH88TtS
+lE1bdjCkCNACe5LIu/vdp+5O6ZvHinlLIiTl9dSPUOh7pC54Seu7qf8lf3987r/JjlK++EoKJT1F
+KyIVrpqpn7fEe08WXnziRacXYXgRR978JvfiMAKQ26aiCIvini4JUquGTP2CVw2vSa0kkAWuyAMX
+39Ba9xkK0QkaT6LfrfSaMnYoYAsWAq8YlcpjBKixnx2NUu4VTBodiNZlWyjQi1vFK6wAA93iQnGx
+MkY1DaNFd70AXvAUAVUf35rH2xI3iggNC7jHhVdNfUnUuyWYfkOU74GeKPmKlxgtCK4l6imXRBaC
+NqDIyGqjaKkN7Gz7DxJGH5y0ikkilejUMAw2zhiWMvnHQbki6p6XGwyHWZBbBgmzLAcJVusoBVVZ
+xVtJ0kC/2ttCq8yMMH5QiGir0ZVm+wThJzURadDxWAGTmoG3u3b6XeImvfZ19p6T6XndEMWHPXbj
+NMe62iCl++BGaWUknnXzycRmBnXzjZRPNvk7vCanaWDRNvB1y1iwsT7ozF+7HvCfLArvasD4PwqP
+VL1qEHTnCIed40eMxVwQKV89GOOfIxh/EUbw60UjDUyP7U+7Zs36GfuEy3Lbuv32bBr5lknPAAtS
+8SV5OfaWb9Yxc7czb/9cgUw94yWxExcGk5/pSWXK4cTP6K3XaVu0SvHa+2Vqz398yfPrz9HF0QiG
+PSrUHZL3/GHOm7b51XD81o25fWqHw2p33A+rLoW6ysI00I99mDkWd9uLw1ZI7bZQGL8m/os2mc1y
+heZXHz/hBWH9SlEcA7HqE1vSKjsfJ9FpGuhXeyvgq8ji6DSJw/PEks2dsx8Y0K39gBVrGXiESYii
+cXw+OYsm8Ho2SQNW9Dl3jdAW9ZEhj2o3vdks/+A5yozwQPJyVeOKFnPBG+lGtlWUoVwQcoWb9Xrj
+zpR9DG6/cHF0iqAvdEnuPtHBp2nT3LSdI3FynVw7jaiv18jP5pzW6uOlG8LR926uThiIUKv9zWtT
+iZdUNgyvPkOr2wq7rtxop4AHwi+T6k3L4SfATdRmqQWkbosE1H6hPIx3c8/FenGGUAzKZ+fbHgD8
+jVnbW3JtZbRr++TcMeQQ1teb2oQ3t5N1HD/cb4lJWXy4Ux1oupr95LDUi3vm+Dt6pgGYbAOYqNsR
+qf8Q4eBwAcX+x2b/AjurJGv4DgAA</str></o-c>
+				<o-c m="setName" s="1;str"><str>Label</str></o-c>
+				<o-c m="setShortDescription" s="1;str"><str id="0"></str></o-c>
+			</o>
+			<o cls="com.inductiveautomation.factorypmi.designer.palette.model.SerializedPaletteItem">
+				<o-c m="setData" s="1;str"><str>H4sIAAAAAAAAAO0YaW/iOPRz+yuy+bSriiRcZRiOFeVo6UAL5WjpfjKJAwYnzjoOx2h+/No5IASo
+qlYjzUiLEI797sPvvVD+e2NhaQWpi4hdkdOKJkvQ1omB7FlFHg1bqS/y39XLMpkuoM5ciSELugxY
+TkUeelBqwamUyUrp669aln+l3mAoZbQ0Z2I6FlIA1edoBRW2dWBF1onlEBvazOVgCiy4JnSp7GQX
+FE3JKrl8uhhS7yC5GITrAigFW4xcJmHIoRm5enlRJpKOXV+GgmzD0xmXCzxGLMA4D8UEOiN06yvl
+OBjpwfGU43JLFQ4V25q/1AzgMEgFW843pUtWRXYha6646gPIZInLSZcWYAWUKQS2q0SQBnR1ihwu
+yKcVSiFDKBjo9g4KXx7fCRH5kstoIAYDrmMdA9ct/RPj0oVsTow9jxgyhSbmAQtRzgJCqRdlLqpq
+Ec+FZVU8hqe6EFn1icGaKVBorXQFWoe7H9qQltUAJyTwQ3NkbVJPOQhcPpK+i95bNBFu3EWZ8xbH
+/dQDItt4SE+xuyhbPsWbZv7wfVPnebOExo8w+AlcP6ZlNeS2Z297GKt77dVA/Z3pKvnNvNC0OY//
+vbBB7Kc6QVQO7bhy/Iq+6FHouj/dGbnfwxlPEEPw87xRVv0aG+2SatWjHvsDGMahdqf12RfyA5Xe
+YEyhRVbw47wPbAsN888S/fZ+y2nsOjFg2HF5Y5KrolP56ZCVq8iUAmlTjzFiS39Uwv3NaDh8fEh/
+vbzgzV7R2Uxx52TdI47n/Olj/BW0uVNij5tVst0fZ12Z51VVK6tiOcVzCOjscHA4cGk4Lei+XXn5
+Q5PMfrhSet1218MMDRhgsM0HHI6yHzD0FEe1ojAbyKoW8qVMvqyKx/CU8jtSzeQ0fq6VQrB/FpsW
+fBEpX4a0E3IwPWB9xyN9XdJKqVKqrGI9yoK4IkKr0Fc3QF/OKPFsI/SXjoWH+W81lSlcZ7NaQQwd
+Inh6Sj8iH8INS+ZL9dE0o4CfomlsbWAhvUeJ48aD5DGElSGFsAuc3aQUb0+nEOKlJ85HRJuXmCBf
+gtt+dMvDjHG8wIRM6bH0GKtpUeqn5WqPIJu1G3F/X3x2CI65AVK2PV0H90ndQK6DwfaBV80Dh4tL
+kE7chSPij1FFqg35+0Q8UPv52M8UMZByrtFsep7fYE7obgbnrjhKnESZOGIwBtiLNHkMae4ea6fI
+4g0tBtgdn07NAdtiGCXlubiimY2iImDxpQEY70AsmbLvJb8BLtITPOJGtyixXrodX6lcLMNFuU9u
+xSsMiqVw4t2tEE8t4TNX1JPDrA4AwEaBurzWwM2bGA2P+usppOmuupyEEmpAegpiEgrP0zFedBJX
+Ud1Z+j7jg1RtH75PfQbAS+Q5UOxufI7qpJX+Hci57Vr06aQHq/51vXuz0M0+rd+3cfu5eP88yd3m
+vJvli9mvLzevjdGDd3d31UOotfz2ZHXQpGGb2SK8vr3sbIqdAjadbPPptTV2Wh28rqc3zX+1wqaP
+v8yKdy/m1XaZRbfwYfy90WaTL6+Lda1z9XQ769/216zRKnij50HXIKPx5fo1baPVU37ybTYuPjXx
+pI9I17T6o9ripQ2X2nqh4duaas3y8zF8mODW1VhvLR034zS9fKaxMWvzxXTdLS7Vq+llXc0id2EO
+Kbkf3HTx7MFQ0/m2OYb6/PukSDJs+KrZ18TCo6mrLafPd+rGaNLBXbFfWzWdZmNeE16qVBK5w0t7
+lXdcsbyvYvCn+BQVYPxyf4n4NT5zfko6M/AJ9Ox5qg/Pa7lPzGs+g/whA9/rBzcijsUh4X9o1f8A
+EQU+S3QTAAA=</str></o-c>
+				<o-c m="setName" s="1;str"><str>Multi-State Indicator</str></o-c>
+				<o-c m="setShortDescription" s="1;str"><ref>0</ref></o-c>
+			</o>
+			<o cls="com.inductiveautomation.factorypmi.designer.palette.model.SerializedPaletteItem">
+				<o-c m="setData" s="1;str"><str>H4sIAAAAAAAAAO1Y3W/bOAx/Tv8Kn5/uHmLH+Vwbx0ObrkCHyxpc0r3ckyKriTbZMiQ5XYD+8UfJ
+dqJ8dV2KAh1wBVLLIvkjRVIkk/Djj4Q5SyIk5enADbyG65AU85im84F7P72pf3A/Rmchn30jWElH
+0YRIhZJs4E5z4tyQmdNsOUH3otG7aH9wxpOp02wEAPKQJdRDAi/oknhqlZGBi3mS8ZSkSgJZoIQ8
+cvHdW+vueQ2v5bU7wXkpvaa0LQrYgoRAK0alchgBatONzmohdzCTRodH0zjHCvSiXPEEKcDwHhBW
+XKyMUVnGKC62Z8ALJ/WAql8vzeMyRpkiQsMCbh07ycCVRH1agukTolwH9AT9b2iJvBlBqfQqyjWR
+WNAMFBlZbRSNwXy3sO0FEkYfvGkVnb5UolDDENg4ZEjK/r8WyoioBY83GBazIA8MAlayHCWUWmsh
+qIoSnksS+npZ7mKtMjLC6FF5RFvtjTTb3+B+khIR+gVPKWBCs3faXTvdInCdSvs6es/JVLy2i5rH
+T2z7aYx0tkFID8HVwsRIPHvMJ+ObIeTNdxI/lcHf4TUxDf0SbQOf5oz5G+v9wvz10X3+m3nhUwoY
+/3vhB1Vv6gRdORr7leM9+mIsiJRv7ozu7+GMfwgj6O28EfqmxlZvu2YNqx77hOJ427rD9mwK+ZZJ
+zwALkvAlOR1762zlwczeTr/9vAKZdMhjUnZcaExupDuVSQfoHvTBKbTNcqV46vwxKN+v7qfTuy/B
+xVkNmr2H1dyTC/445lme/Wk4/ira3CG1+81qt93vZ10IeRU1Ql8/DmFOkZhvDw5bLi2nBWzO1XNP
+mmQ2w5U3Ht3eJmhOqpEC14GYVIGNaRI1e/1mL/T1stwVcCuidu+8H8CnJJs9az4woFcMxdtDAsNr
+waDbb/QbXrv461jL0Ge4Cr9tjzaudNIYqcVupKOrnDJFU/+SCueG8cf1wjn3snRehRHX8R7eRAmi
+8GK0SSAKoDRVURD6+nFY7F6SKVBLkRmIKJET/wi3Zh1ytk4TzLTl8D+qB91eEJy3unpEOmbj9SpF
+CcVjwTNpp0euKPOmgpARytYzmt0YDzHYRc/G0XkGxa3I1KLO7NWXMlezvDh4s3/Xv7OqaXXpAjca
+czjy7bWdArXXjt+WG4hQq8MVeHOdrqnMGFp9gXq9lTD6+gU7t3BP+DSpyrQpfJOxA7WZzE3Y9SgM
+qNVUfBxvsuBiPf2DKw6WuBast+vUHs5XxPLKoLvyztygdKKQyuUhYbuv2oSXZgB825IW+PtLgOZJ
+CfBTqV9IgNtXhl8b0vqZPbuB1wWtUdW1FwR8vb0pTLCye3HB8e6+WBv3tI/32iNjg2bvHJc6uet3
+X9H1DUBvG8B4vRzy9G8c8GJxAaX8JSb6Dxzc2iy6EQAA</str></o-c>
+				<o-c m="setName" s="1;str"><str>Fan Status</str></o-c>
+				<o-c m="setShortDescription" s="1;str"><ref>0</ref></o-c>
+			</o>
+			<o cls="com.inductiveautomation.factorypmi.designer.palette.model.SerializedPaletteItem">
+				<o-c m="setData" s="1;str"><str>H4sIAAAAAAAAAO1YzW7bOBA+J0+h1aHYPZiy/Jc0klU0SYNtESfGRt3LnmiJTthSokBSjg3kofoM
++2Q7pCSbtuWgSBGgBfZkkZz5Zjj/dPhumTFnQYSkPB+7Puq6DskTntL8fux+jq86p+676Djksy8k
+UdJRNCNS4awYu3FJnCsyc3p9xx+d+f7Z0Hemd7HT6/oAMi8yirBIHuiCILUqyNhNeFbwnORKwrHA
+GXnk4itayz5BXdRHg6H/tuZenwysE9AFC4FXjErlMAKnPTc6Pgq5kzBpZCCap2WiQC4uFc+wAgw0
+x4niYmWUKgpGk2p7BrRwUwSnevne/LxPcaGI0LCA20mcbOxKoj4sQPU7olwH5PjBF7zAaEZwLlFz
+cklkImgBggyvVoqmWsFKt+/gMPJgpUUMA6lEJYZh0PGCYSmDfyyUCVEPPN1gWMSCzBk4rCY5eFBL
+PQpBVJTxUpLQ05/1bqJFRoYZPypEtNZoosmuwfwkJyL0Kpqawbhm77a7erqV44aN9LX3nuNpaG0T
+9Q7f2LbTFOtoA5e2wR2FmeF49ppPxjYXEDdfSfpUO3+H1vg09Gq0DXxeMuZttPcq9ddX9/gvZoUP
+OWD8b4UlVa9qBF05uvuV42e0xVQQKV/dGINfwxh/EUbw61kj9EyNbVa7al00PfYJp+m2du36bAr5
+lkrPAAuS8QV5OfbW3eqLmb2dfvtpBTz5BU9J3XGhMbmR7lQmHPpuROdOJW1WKsVz57dxvT7/HMe3
+N/7Z8RE0e5SoeyQf+OOUF2Xxu6H4o2pzbWL3m9Vuu9+PuhDiKuqGnv5pw4yxuN8eHLZMWk8LibnX
+0H3RJLMZrtB08vGmzIigyTWeEdZMFkkHaLLGvynNolE36IHW+rPeFZAc0duTwB8MgvrUbFlTQg3t
+GOytaYElDas/CrpBJ+iEHksap9vitS61ac65SElj5Fm1aACtTrBE8lEPahUFuqY5Od8itjO+HyRM
+BDSYWfUAdqLO6ak/6o36emgRmyOaq8gPPf2z3ptjJolnpZ+djutsNLfau9LfmJVNzMKEFaYzFp10
+kbY0fLXz3JXzOV3uBnrk/Pvt6g1TgXf+5l4FTdC2AcRkqfbYNeuf8eRaM+tvg3LS/X7Uy1WOM5pM
+BS+kHb6logzFgpAJLtrc1Upgu8jG0XkAxbfKpKoO7tW/OpeKsrpkL7gNbi3vNkXBd6MpB0d+vLQj
+8+hHnweWGYhQq/YOsUn3SyoLhlc30E+2XKLLg79TJfaYX8bVqBbDS8t21OblAEjVqA6ozdR+GO/u
+gYv16wRMsRdaOwV0D8BOgtuaJyZZ0cZn93rroCXN4MtuFxXFT/f2My7rHW4HBzqbJu8f5npxYxr8
+QGMyAMNtAGP1eg7Rz3BYWFRwUv9ZEP0HGELMvV0QAAA=</str></o-c>
+				<o-c m="setName" s="1;str"><str>Numeric Label</str></o-c>
+				<o-c m="setShortDescription" s="1;str"><ref>0</ref></o-c>
+			</o>
+			<o cls="com.inductiveautomation.factorypmi.designer.palette.model.SerializedPaletteItem">
+				<o-c m="setData" s="1;str"><str>H4sIAAAAAAAAAO1XX2/bNhB/dj6FqqftwZRlx1kbySqaOAVaJI2xuHvZEy0xCVtKFEjKiYF8+B0p
+yqZkOdhSBGiBATYkkne/+8u7U/z+MWfemghJeTHzQzTyPVKkPKPF3cz/uvw4fOu/T45ivvpGUiU9
+RXMiFc7Lmb+siPeRrLzxxAtPTsPj0zD0FjdLbzwKAeS2zCnCIr2na4LUpiQzP+V5yQtSKAnHAufk
+gYvvaCv7DzRCE3Q8Dd9Z7u3JsXMCumAh8IZRqTxG4HTsJ0eDmHspk0YGokVWpQrk4krxHCvAQLc4
+VVxsjFJlyWhab6+AFixFcKqXH8zjQ4ZLRYSGBdxh6uUzXxJ1sQbVb4jyPZATRt/wGqMVwYVEzcmc
+yFTQEgQZXq0UzbSCtW7/gsPIg5UWMY2kErUYhkHHc4aljP52UK6IuufZDsMhFuSWQcAsycEDK3UQ
+g6gk55UkcaBf7W6qRSaGGT8oRLTW6EqTXYL7SUFEHNQ0lsGEZs/arp5+HbhpI30bved4GlrXRePD
+Frt+WmCdbRDSPrhBnBuOZ818Mr45h7z5TrInG/wOrYlpHFi0HXxRMRbstA9q9bemB/wX88JFARj/
+e+GRqld1gq4co/3K8TP6YiGIlK/ujONfwxl/Ekbw63kjDkyNbVZdtc6bHvuEs6ytXb8+u0LeUukZ
+YEFyviYvx27ZZg0ze51++3kDPMU5z4jtuNCY/ER3KpMOEz+ht14tbVUpxQvvzcyuz74ul9dfwtOj
+ATR7lKo7JO/5w4KXVfmbofi9bnN9YvebVbfd72ddDHmVjOJAP/owl1jctQeHlkvttJAau6b+iyaZ
+3XCFFlef5vSOKszmVJYMb5rZIh0CVd5EOKN58m4UjadxoF/troDrkUxG0ygMTyJ7bPacQeHyYu5Z
+6Na4wNItJ/xG0TAaxgFLm7C74rUu1jlnXGSkcfOqXjSITi94RPJBj2o1BTqDOLKzFnV7eKJRyoT7
+d4oDLVQSxoF+bPc6F/A/LDuXdXtXjcV75v6FWdVkNMxfcbZiyckY6SjAWz/PfFPgnKYLwUvpZlGl
+KENLQcgVLvt81kvgusnF0ekINbBO6NrAvTJkU7qs6mQeR9fRtePX5m6GfrLg4N1Pczc/Bj86pTtu
+IEJt+gv17tbZFP0CZb1VQfQtDTuXdY/5ZVyNakv44HEDtRvgAamemAG1GZ4P493cc7H9SABXdCth
+0qljewButl1bnkt9dfoY3Z7rHPQkNLy5Zbum+Om+wUzMxofL8oEOo8knh7le3CCOf6BBGIBpG8B4
+3c4D+nMYFg4VnNiP9uQfaPXp3eUPAAA=</str></o-c>
+				<o-c m="setName" s="1;str"><str>LED Display</str></o-c>
+				<o-c m="setShortDescription" s="1;str"><ref>0</ref></o-c>
+			</o>
+		</arraylist>
+	</o-c>
+	<o-c m="setName" s="1;str"><str>CTG Palette</str></o-c>
+</o>
+</objects>

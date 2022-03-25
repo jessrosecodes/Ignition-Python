@@ -1,0 +1,311 @@
+<html>
+<head>
+<style>
+body {
+	color: #333333;
+	font-size: 12px;
+	font-family: tahoma;
+}
+
+.stylebold {
+	color: #555555;
+	font-size: 12px;
+	font-family: tahoma;
+	font-weight: bold;
+}
+
+.style11 {
+	color: #333333;
+	font-size: 14px;
+	font-family: tahoma;
+	font-weight: bold;
+}
+li {
+  margin:0px;
+  padding: 2px;
+  list-style: none;
+}
+ul {
+  margin: 0px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  
+}
+a:link, a:visited {
+  text-decoration: none
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+a {
+  margin: 0px;
+  padding: 0px;
+}
+a[name] {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+hr {
+  padding: 0px; margin: 0px;
+  margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<font style="font-size:14px;">This article demonstrates how to install and use Click to Graph, a powerful way to add and remove pens from Ignition's Easy Chart Component in runtime. Click to Graph allows you to add a right click menu to components, such as led displays, labels, numeric labels, etc, to add or remove that item from an Easy Chart graph dynamically. You can even save graphs and come back to them at later times. This way you choose what you want to see in a graph. Please read the instructions carefully and perform them in order.</font>
+<br /><br />
+<div style="border: 2px solid grey; width: 400px; padding-top: 10px;">
+<span style="padding-left: 30px;" class="stylebold">Menu</span>
+<ul>
+<li>
+<a href="#Install">Installing Click to Graph</a>
+</li>
+<li>
+<a href="#works">How Click to Graph Works</a>
+</li>
+<li>
+<a href="#configure">How to Create and Configure Pens for Click To Graph</a>
+</li>
+<li>
+<a href="#client">How to use Click to Graph from a Client</a>
+</li>
+<li>
+<a href="#existing">How to add Click to Graph to already existing components</a>
+</li>
+<li>
+<a href="#bulk">Bulk Pen Creation</a>
+</li>
+</ul>
+</div>
+<br /><br />
+<span class="style11"><a name="Install">Installing Click to Graph</a></span><br />
+<hr size="1" color="#999999" style="padding:0"/>
+<div style="padding-top:0px;padding-left:10px;">
+<span class="style11">Step 1: Download Click to Graph File</span><br />
+<div style="padding-left:20px;padding-top:10px">
+1) Click on the following link to download the zip file:
+<div style="padding-top:5px;padding-left:20px;"><a href="http://www.inductiveautomation.com/?wicket:interface=:1:downloadsection:1:downloads:0:downloadfrag:link::ILinkListener::">Click to Graph Goodie</a>
+</div><br />
+2) Extract the contents of the <span class="stylebold">ctg.zip</span> to a folder. This file contains 6 files:<br /><br />
+<div style="padding-left:30px;">
+<span class="stylebold">ctg_sqlserver.sql</span> - a SQL Server backup file containing all the necessary tables<br />
+<span class="stylebold">ctg_mysql.sql</span> - a MySQL backup file containing all the necessary tables<br />
+<span class="stylebold">ctg.py</span> - a python script that contains all the necessary functions<br />
+<span class="stylebold">ctg.fpal</span> - a custom palette that contains a few sample components<br />
+<span class="stylebold">ctg.vwin</span> - a file that contains all the necessary Ignition windows<br />
+<span class="stylebold">ctg_shutdown_script.txt</span> - a file that contains the shutdown script needed<br />
+</div>
+</div><br />
+<span class="style11">Step 2: Import SQL Dump File</span><br />
+<div style="padding-left:20px; padding-top:10px;">If your database is MySQL, follow these steps:</div>
+<div style="padding-left:20px;padding-top:10px">
+1) Open up Command Prompt by going to <span class="stylebold">Start->Program Files->Accessories->Command Prompt</span><br /><br />
+2) Change directory to MySQL bin by entering in (afterwards press enter):
+<div style="padding-top:5px;padding-left:20px;"><span class="stylebold">cd "C:\Program Files\MySQL\MySQL Server 5.0\bin"</span>
+</div><br />
+3) Now import <span class="stylebold">ctg_mysql.sql</span> by entering in (afterwards press enter):
+<div style="padding-top:5px;padding-left:20px;"><span class="stylebold">mysql -u root -p YourDBName < "C:\Location to\ctg_mysql.sql"</span>
+</div><br />
+4) Enter in your MySQL root password (afterwards press enter)<br /><br />
+5) Done. The Click to Graph tables are now successfully imported.
+</div>
+<div style="padding-left:20px; padding-top:10px;">If your database server is SQL Sever, open up the dump file <span class="stylebold">ctg_sqlserver.sql</span>
+in Microsoft SQL Server Management Studio, select your database and execute the file.</div><br />
+<span class="style11">Step 3: Import Script Module</span><br />
+<div style="padding-left:20px;padding-top:10px">
+1) Go to the Ignition Gateway homepage.<br /><br />
+2) Open up the Ignition Designer by clicking on the <span class="stylebold">Launch Designer</span> link. Login with your username and password (default is <span class="stylebold">admin</span> and <span class="stylebold">password</span>). Select the project you want to use Click to Graph in.<br /><br />
+3) Once open, go to <span class="stylebold">Project->Script Modules</span> from the menu bar.<br /><br />
+4) Click on the <span class="stylebold">Import a package or script</span> button.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/import_script.gif">
+</div><br /><br />
+5) Select the <span class="stylebold">ctg.py</span> file.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/select_py.gif">
+</div><br /><br />
+6) Name the module <span class="stylebold">ctg</span>.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/module_name.gif">
+</div><br /><br />
+7) Done, you now have some global functions that we are going to use later. Press Ok to close.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/import_py_done.gif">
+</div><br />
+</div><br />
+<span class="style11">Step 4: Import Palette</span><br />
+<div style="padding-left:20px;padding-top:10px">
+1) With the designer still open, right click on the <span class="stylebold">Component Palette</span> and select <span class="stylebold">Import Palette(s)</span>.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/import_palette.jpg">
+</div><br /><br />
+2) Select the <span class="stylebold">ctg.fpal</span> file.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/select_fpal.gif">
+</div><br /><br />
+3) Done, you now have some pre-configured components for Click to Graph that we can use.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/import_fpal.jpg">
+</div><br /><br />
+</div>
+<span class="style11">Step 5: Import Ignition Windows</span><br />
+<div style="padding-left:20px;padding-top:10px">
+1) With the designer still open, right click on <span class="stylebold">Windows</span> inside the <span class="stylebold">Project Browser</span> and select <span class="stylebold">Import Window(s)</span>.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/import_vwin.gif">
+</div><br /><br />
+2) Select the <span class="stylebold">ctg.vwin</span> file.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/select_vwin.gif">
+</div><br /><br />
+3) Done, you now have some pre-configured windows for Click to Graph that we can use.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/import_vwin_done.gif">
+</div><br /><br />
+4) Lastly, you need to add the global shutdown script. Go to <span class="stylebold">Project->Event Scripts (Client)</span>. Next select the <span class="stylebold">Shutdown</span> tab and enter in the contents of the <span class="stylebold">ctg_shutdown_script.txt</span>. The script clears out the current graph when the user logs out or closes the client.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/shutdownscript.gif">
+</div><br /><br />
+</div>
+All done! Now let's go over how Click to Graph works.
+</div><br />
+<span class="style11"><a name="works">How Click to Graph Works</a></span><br />
+<hr size="1" color="#999999" style="padding:0"/>
+<div style="padding-top:0px">
+The first part to understand is that Click to Graph stores pen configurations in the database. During the runtime each user picks and chooses from these pens. Picking and choosing these pens manipulates the <span class="stylebold">ctg_active_client</span> table. This table then drives the Easy Chart's pens/axes datasets dynamically. The ctg_active_client table is based on a unique Client ID created by Ignition when you login to a client. This ID uniquely identifies one client from another. This way each client can have its own set of pens the user can configure. If that ID is somehow lost (possible via redirection), the user must log in again to access the graph.<br /><br />
+Let's take a look at the databases tables needed for Click to Graph to work (there are 6 of them):
+<br /><br />
+<div style="padding-left:20px;">
+<span class="stylebold">ctg_pens</span> - table stores all possible pens for the graph.<br />
+<span class="stylebold">ctg_axes</span> - table stores all the available axes for the pens.<br />
+<span class="stylebold">ctg_subplots</span> - table stores all the available subplots for the pens.<br />
+<span class="stylebold">ctg_active_client</span> - table stores all the pens the clients have selected.<br />
+<span class="stylebold">ctg_saved_graphs</span> - table stores saved graphs.<br />
+<span class="stylebold">ctg_saved_graph_pens</span> - table stores the pens of saved graphs.<br />
+</div>
+<br />
+The <span class="stylebold">ctg_pens</span> table can be manipulated using the <span class="stylebold">CTG_Pen_Edit</span> and <span class="stylebold">CTG_Pens_Axes</span> windows that we imported into our Ignition project earlier. You can add/edit/remove pens. These pens correspond to tags or items that Ignition (or another historian) is already trending. Attached to a pen is a <span class="stylebold">Point ID</span>, which uniquely identifies one pen from another. Every Ignition component that we want to use as a Click to Graph item must also contain the Point ID, so that it knows how to add or remove that specific pen.<br /><br />
+Next, the actual Easy Chart, located on the <span class="stylebold">CTG_Graph</span> window, has three expert properties called <span class="stylebold">DB Pens</span>, <span class="stylebold">Tag Pens</span> and <span class="stylebold">Axes</span> which are each bound to a SQL query. The pen datasets are bound to a join of the <span class="stylebold">ctg_active_client</span> table and the <span class="stylebold">ctg_pens</span> table. The axes dataset is bound to the <span class="stylebold">ctg_axes</span> table.<br /><br />
+Let's go over a small example to understand how things relate.<br /><br />
+<span class="style11">Example 1: Using a Click to Graph Component</span><br />
+<div style="padding-left:20px;padding-top:10px">
+1) Open up the Ignition Designer.<br /><br />
+2) Open up or create a window.<br /><br />
+3) From the Component Palette under <span class="stylebold">CTG Palette</span>, drag and drop the <span class="stylebold">Multi-State Indicator</span> pre-configured component into the window.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/drag_ind.jpg">
+</div><br /><br />
+4) You will notice there is a <span class="stylebold">Dynamic Property</span> called <span class="stylebold">PointID</span> attached to the component with a value of <span class="stylebold">HOA</span>. This Point ID must match the Point ID of a pen in the <span class="stylebold">ctg_pens</span> table.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/pointid.jpg">
+</div><br /><br />
+5) Now, let's take a look at the <span class="stylebold">Mouse Pressed and Released events</span> on this component. This is where the right click menu is called. So, right click on the component and select <span class="stylebold">Event Handlers..</span>.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/event.gif">
+</div><br /><br />
+6) You will notice the script is the same for the mousePressed and mouseReleased. They both call a global script function that we imported earlier into the Script Modules. We pass the <span class="stylebold">event</span> object into the showPopup function and it knows how to retrieve the Point ID from the component. The function also takes care of creating the popup menu.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/mouseaction.gif">
+</div><br /><br />
+7) Now, cancel out of the event handlers configuration and go into Preview mode in the designer by selecting <span class="stylebold">Project->Preview Mode</span> from the menu. Now we can interact with the components. Right click on the indicator and you will get the below menu. This is how users will add and remove pens from the Easy Chart.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/menu.gif">
+</div><br /><br />
+<span class="style11"><a name="configure">How to Create and Configure Pens for Click To Graph</a></span><br />
+<hr size="1" color="#999999" style="padding:0"/>
+It is a good idea to clarify what a pen is. A pen is a row of data stored in a chart dataset that the chart uses to graph a line. A pen is also the line that a chart graphs. Data that makes up a pen includes the source of historical data that is being graphed, display characteristics of the pen and the name of the pen.   
+<br />
+<br />
+In Ignition there are two kinds of pens that can be used in Click to Graph that are distinguished by how the historical data is stored.<br /><br />
+<div style="padding-left: 30px;">
+1. The historical data of a <span class="stylebold">database pen</span> comes from a column in a database table.<br />
+2. The historical data of a <span class="stylebold">historical tag pen</span> comes from the historical logging of a SQLTag.<br /><br />
+</div>
+
+Before pens can be used by Click to Graph they must be stored in the <span class="stylebold">ctg_pens</span> database table. Several windows exist for the purpose of viewing, adding and editing pen information in the <span class="stylebold">ctg_pens</span> database table. Also, a couple windows are used to add/edit information for axes and subplots.
+<div style="padding-left: 30px; padding-top: 10px;">
+<span class="stylebold">CTG_Add_Pens</span> - window is used to view pens and add and remove pens from the Easy Chart. (Adds and deletes pens from the <span class="stylebold">ctg_active_client</span> database table.)<br />
+<span class="stylebold">CTG_Pens_Axes</span> - window is used to view pens, view pen axes, view pen subplots and to delete these and to navigate to other windows that can edit or add these.<br />
+<span class="stylebold">CTG_Pen_Edit</span> - window is used to add or edit pen data in the <span class="stylebold">ctg_pens</span> database table.<br />
+<span class="stylebold">CTG_Bulk_Pen_Creation</span> - window is used to add many historical tag pens to the <span class="stylebold">ctg_pens</span> database table.<br />
+<span class="stylebold">CTG_Axis_Edit</span> - window is used to add or edit pen axes in the <span class="stylebold">ctg_axes</span> database table.<br />
+<span class="stylebold">CTG_Subplot_Edit</span> - window is used to add or edit subplots in the <span class="stylebold">ctg_subplots</span> database table.
+</div>
+<br />
+Below is an example using these windows to configure and add a historical tag pen. Be sure that one or more SQLTags have historical logging enabled, as otherwise there will be no historical tag pens to add.
+<br /><br />
+<span class="style11">Example: Creating and Configuring Pens</span><br />
+<div style="padding-left:20px;padding-top:10px">
+0) Open up the Ignition Designer, put it in Preview Mode: <span class="stylebold">Project->Preview Mode</span> and enable full read/write gateway communication: <span class="stylebold">Project->Comm Read/Write</span>.<br /><br />
+1) Open the window <span class="stylebold">CTG_Add_Pens</span>.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/CTG_Add_Pens.gif" />
+</div>
+<br />
+2) Click on the <span class="stylebold">Edit Pens</span> button which opens the <span class="stylebold">CTG_Pens_Axes</span> window.
+<br /><br />
+<div style="padding-left:30px;">
+<img src="images/CTG_Pens_Axes.gif" />
+</div>
+<br />
+3) Click on the Axes tab and then click on the <span class="stylebold">Add</span> button. This opens the <span class="stylebold">CTG_Axis_Edit</span> window. Fill in the axis information and click on the <span class="stylebold">Add Axis</span> button. This creates an axis.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/CTG_Axis_Edit.gif" />
+</div>
+<br />
+4) Switch to the Pens tab and click the <span class="stylebold">Add</span> button. This opens the <span class="stylebold">CTG_Pen_Edit</span> window. Fill in the fields of the General and Style sections as needed. Select the Tag tab and the datasource where your historical tags are. Clicking on the little arrow box in the far right of the Tag Path field provides a list of all historical tags in the selected datasource. Choose a historical tag from this. Choose the Min/Max aggregation mode. Click on the <span class="stylebold">Add Pen</span> button and then close the screen.
+<br />
+<br />
+<div style="padding-left:30px;">
+<img src="images/CTG_Pen_Edit.gif" />
+</div>
+<br />
+5) Well done. You should now see the pen you added in the <span class="stylebold">CTG_Pens_Axes</span> window. The PointID of this pen can now be used as the value of the PointID dynamic property of a component to associate the component with the pen.
+<br />
+<br />
+<div style="padding-left:30px;">
+<img src="images/CTG_Pens_Axes2.gif" />
+</div>
+<br />
+</div>
+
+<span class="style11"><a name="client">How to use the Click to Graph from a Client</a></span><br />
+<hr size="1" color="#999999" style="padding:0"/>
+1) Right click on a component and select <span class="stylebold">(+) Add to Graph</span> to add that pen to the current working graph. After that, you can remove the pen and even clear out the current graph.<br /><br />
+2) To see the current graph, just open up the <span class="stylebold">CTG_Graph</span> window.<br /><br />
+<div style="padding-left:30px;">
+<img src="images/graph.gif">
+</div><br /><br />
+</div>
+<span class="style11"><a name="existing">How to add Click to Graph to already existing components</a></span><br />
+<hr size="1" color="#999999" style="padding:0"/>
+So, if you would like to add Click to Graph to already existing components do the following:<br /><br />
+1) Right click on the component and select <span class="stylebold">Component Customizers->Dynamic Properties</span> and add a new property named <span class="stylebold">PointID</span> of type <span class="stylebold">String</span>.<br /><br />
+2) Add the following script in the <span class="stylebold">mousePressed</span> and <span class="stylebold">mouseReleased</span> events by right clicking on the component and selecting <span class="stylebold">Event Handlers..</span>:<br /><br />
+<div style="padding-left:30px;">
+<span class="stylebold">if event.button != event.BUTTON1:<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.ctg.showPopup(event)</span>
+</div>
+</div>
+<br />
+3) Lastly, if not done already, add these components as pens the same way you did above with the pen editing windows.<br /><br />
+
+
+<span class="style11"><a name="bulk">Bulk Pen Creation</a></span><br />
+<hr size="1" color="#999999" style="padding:0"/>
+The Bulk Pen Creation screen is used to create many historical tag pens at the same time. 
+<br /><br />
+Selecting a datasource displays a list of available historical tags in that datasource. Only historical tags that are not already used by Click to Graph pens are shown.
+<br /><br />
+Default values are selected in the General and Style sections. The Point ID and name of each pen will be the SQLTag path with whatever is in the "PointID Suffix" field appended.
+<br /><br />
+<div style="padding-left:30px;">
+<img src="images/CTG_Bulk_Pen_Creation.gif">
+</div><br /><br />
+
+
+Have fun with this goodie and as always if you have any questions please call us at 800.266.7798.
+</body>
+</html>

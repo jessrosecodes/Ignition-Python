@@ -1,0 +1,48 @@
+################################################################################## END NOTES FOR USER####################################################################################################################
+
+
+# Create Two Buttons on EACH PAGE you are exporting Alarm Info From
+# Copy and paste info in window to excel
+
+#BUTTON 1 EXTRACT:
+
+for comp in event.source.parent.getComponents(): 
+	compname = comp.name
+	parsname = compname[0:20]
+	component = event.source.parent.getComponent('Power Table')
+	if parsname == 'Coded Alarm Triangle':
+		print comp.name
+		#print comp.AlarmPaths.getValueAt(0,0)
+		#print comp.Alm_Description
+		#print comp.Description
+for comp in event.source.parent.getComponents(): 
+	compname = comp.name
+	parsname = compname[0:20]
+	component = event.source.parent.getComponent('Power Table')
+	if parsname == 'Coded Alarm Triangle':
+		#print comp.name
+		print comp.AlarmPaths.getValueAt(0,0)
+		#print comp.Alm_Description
+		#print comp.Description
+for comp in event.source.parent.getComponents(): 
+	compname = comp.name
+	parsname = compname[0:20]
+	component = event.source.parent.getComponent('Power Table')
+	if parsname == 'Coded Alarm Triangle':
+		#print comp.name
+		#print comp.AlarmPaths.getValueAt(0,0)
+		print comp.Alm_Description
+		#print comp.Description
+		
+		-------------------
+#BUTTON 2 EXTRACT:
+
+for comp in event.source.parent.getComponents(): 
+	compname = comp.name
+	parsname = compname[0:20]
+	component = event.source.parent.getComponent('Power Table')
+	if parsname == 'Coded Alarm Triangle':
+		#print comp.name
+		#print comp.AlarmPaths.getValueAt(0,0)
+		#print comp.Alm_Description
+		print comp.Description
